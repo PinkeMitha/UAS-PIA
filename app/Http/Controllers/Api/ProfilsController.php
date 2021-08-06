@@ -14,7 +14,7 @@ class ProfilsController extends Controller
      */
     public function index()
     {
-        $profils = Profils::orderBy('id', 'desc')->paginate(3);
+        $profils = Profils::all();
         return response()->json([
             'success' => true,
             'message' =>'Daftar data profile'

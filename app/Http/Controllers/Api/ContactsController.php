@@ -14,7 +14,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        $Contacts = Contacts::orderBy('id', 'desc')->paginate(3);
+        $Contacts = Contacts::all();
         return response()->json([
             'success' => true,
             'message' =>'Daftar data Contact'
